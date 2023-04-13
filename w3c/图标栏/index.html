@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <style>
+    .icon-bar {
+      display: flex;
+      width: 50px;
+      flex-wrap: wrap;
+    }
+
+    .icon-bar a {
+      width: 50px;
+      background: black;
+      color: white;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .icon-bar a:hover {
+      background: blue;
+    }
+
+    a.active {
+      background: green;
+    }
+
+    .icon-bar2 a {
+      width: 50px;
+      height: 30px;
+      padding: 10px;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .icon-bar2 {
+      display: flex;
+      background: black;
+      width: 300px;
+      margin: 0 auto;
+    }
+  </style> -->
+  <style>
+    .icon-bar {
+      width: 100%;
+      /* 全屏宽度 */
+      background-color: #555;
+      /* 深灰色背景 */
+      overflow: auto;
+      /* 由于浮动而溢出 */
+    }
+
+    .icon-bar a {
+      float: left;
+      /* 浮动链接并排 */
+      text-align: center;
+      /* 居中对齐文本 */
+      width: 20%;
+      /* 等宽（5 个图标，每个 20% 的宽度 = 100%） */
+      padding: 12px 0;
+      /* 一些顶部和底部填充 */
+      transition: all 0.3s ease;
+      /* 为悬停效果添加过渡 */
+      color: white;
+      /* 白色文字颜色 */
+      font-size: 36px;
+      /* 增加字体大小 */
+    }
+
+    .icon-bar a:hover {
+      background-color: #000;
+      /* 添加悬停颜色 */
+    }
+
+    .active {
+      background-color: #4CAF50;
+      /* 添加活动/当前颜色 */
+    }
+  </style>
+  <!-- <style>
+    body {margin:0}
+    
+    .icon-bar {
+      width: 90px;
+      background-color: #555;
+    }
+    
+    .icon-bar a {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 36px;
+    }
+    
+    .icon-bar a:hover {
+      background-color: #000;
+    }
+    
+    .active {
+      background-color: #4CAF50;
+    }
+
+
+    </style> -->
+</head>
+
+<body>
+
+
+  <div class="icon-bar">
+    <a class="active" href="#"><i class="fa fa-home"></i></a>
+    <a href="#"><i class="fa fa-search"></i></a>
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-globe"></i></a>
+    <a href="#"><i class="fa fa-trash"></i></a>
+  </div>
+
+  <div class="icon-bar2">
+    <a class="active" href="#"><i class="fa fa-home"></i></a>
+    <a href="#"><i class="fa fa-search"></i></a>
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-globe"></i></a>
+    <a href="#"><i class="fa fa-trash"></i></a>
+  </div>
+</body>
+
+</html>
