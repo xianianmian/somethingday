@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>菜单图标</title>
+  <style>
+    .static,.active{
+      height: 60px;
+      background-color: white;
+    }
+    div{
+      width: 30px;
+      height: 3px;
+      background-color: black;
+      margin:10px 5px;
+    }
+    .change1{
+      transition: 0.4s;
+      transform: rotate(45deg) translate3d(0px,9px,0px);
+      /* transform: rotate(-45deg) translate(-9px, 6px); */
+    }
+    .change2{
+      transition: 0.4s;
+      transform: rotate(-45deg) translate3d(0px,-10px,0px);
+      /* transform: rotate(45deg) translate(-8px, -8px); */
+    }
+  </style>
+</head>
+<body>
+  <div class="static">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <hr>
+  <div class="active">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script>
+    var active = document.querySelector('.active')
+    active.addEventListener('click',function(e){
+      console.log(e.target)
+      var divs = document.querySelectorAll('.active div')
+      divs[0].classList.add('change1')
+      divs[1].style.display = 'none'
+      //       divs[1].style.opacity = 0
+      divs[2].classList.add('change2')
+    })
+
+  </script>
+</body>
+</html>
