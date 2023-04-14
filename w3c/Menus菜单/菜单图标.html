@@ -45,10 +45,13 @@
     active.addEventListener('click',function(e){
       console.log(e.target)
       var divs = document.querySelectorAll('.active div')
-      divs[0].classList.add('change1')
+      // divs[0].classList.add('change1')
+      // divs[1].style.display = 'none'
+      // divs[2].classList.add('change2')
+      divs[0].classList.toggle('change1')
       divs[1].style.display = 'none'
       //       divs[1].style.opacity = 0
-      divs[2].classList.add('change2')
+      divs[2].classList.toggle('change2')
     })
 
   </script>
