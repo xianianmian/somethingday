@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>可折叠内容</title>
+  <style>
+    .accordion{
+      display: block;
+      width: 100%;
+      height: 60px;
+      background-color: gray 0.5;
+      color: black;
+      border:none;
+      text-align: start;
+      padding: 10px 10px;
+      font-size: 20px;
+    }
+    .active .accordion:hover{
+      background-color: aqua;
+    }
+    .accordion:after{
+      content: "+";
+      float: right;
+    }
+    .panel{
+      background-color: yellow;
+      height: 40px;
+      display: none;
+    }
+    p{
+      font-size: 20px;
+      margin: 0;
+    }
+    .cahnge{
+      display: block;
+      transition: 2s;
+    }
+    .active:after {
+      content: "-";
+    }
+
+  </style>
+</head>
+<body>
+<div>
+  <button class="accordion">Section 1</button>
+  <div class="panel">
+    <p>Lorem 1ipsum...</p>
+  </div>
+
+  <button class="accordion">Section 2</button>
+  <div class="panel">
+    <p>Lorem2 ipsum...</p>
+  </div>
+
+  <button class="accordion">Section 3</button>
+  <div class="panel">
+    <p>Lorem 3ipsum...</p>
+  </div>
+</div>
+
+  <script>
+    var panels = document.querySelectorAll('.panel')
+    var btns = document.querySelectorAll('.accordion')
+
+    for(let i=0;i<btns.length;i++){
+      btns[i].addEventListener('click',function(e){
+        panels[i].classList.toggle('cahnge')
+        this.classList.toggle('active')
+      })
+    }
+  </script>
+</body>
+</html>
