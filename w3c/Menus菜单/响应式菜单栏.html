@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>响应式菜单栏</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    #myTopnav{ height: 60px;   background-color: #8FA63B; min-width:500px;
+    }
+    a{
+      display: block;
+      text-decoration: none;
+      color:#EEEDE9;
+      float: left;
+      min-width:80px;
+      height: 100%;
+      text-align: left;
+      line-height: 60px;
+      font-size: 20px;
+      transition: 0.4s;
+    }
+    a:hover{background-color:#EEEDE9 ;color:#8FA63B}
+    a:last-child{  display: none;  text-align: center;}
+    a.change{
+      background-color: #8FA63B;
+      clear: both;
+      width: 100%;
+      text-align: start;
+    }
+    a:last-child:hover{
+      background: blue;color:#8FA63B;
+    }
+    @media screen and (max-width:800px) {
+      a:nth-child(2),a:nth-child(3),a:nth-child(4){ display: none; }
+      a:last-child{ display: block; float: right;}
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <script>
+  function  myFunction(){
+    var as = document.getElementsByTagName('a')
+    for(let i=1;i<as.length-1;i++){
+      as[i].classList.add('change')
+      as[i].style.display = 'block'
+    }
+  }
+  </script>
+</body>
+</html>

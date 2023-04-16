@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选项卡</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #row .tab {
+      height: 60px;
+      background-color: gray;
+    }
+
+    #row .tab button {
+      border: none;
+      min-width: 60px;
+      font-size: 20px;
+      display: block;
+      background-color: gray;
+      float: left;
+      transition: 0.4s;
+      height: 100%;
+    }
+
+    #row .tab button:hover {
+      background-color: rgb(71, 69, 69);
+    }
+
+    #row .tab .active {
+      background-color: rgb(71, 69, 69);
+    }
+
+    #row .tabcontent {
+      display: none;
+      animation: danru 1s;
+    }
+
+    hr::after{
+      content: '分割线';
+    }
+    .el-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .el-divider::before,
+  .el-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #e4e7ed;
+  }
+
+  .el-divider__text {
+    margin: 0 16px;
+  }
+
+    @keyframes danru {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Tab links -->
+  <div id="row">
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+  
+    <!-- Tab content -->
+    <div id="London" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+  
+    <div id="Paris" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+  
+    <div id="Tokyo" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+  </div>
+  <div class="el-divider">
+    <span class="el-divider__text">分割线</span>
+  </div>
+  <script>
+    var btns = document.querySelectorAll('.tablinks')
+    btns[0].classList.add('active')
+    var tabcontents = document.querySelectorAll('.tabcontent')
+    tabcontents[0].style.display = 'block'
+    function openCity(e, content) {
+      [...e.target.parentElement.children].forEach(x => {
+        x.classList.remove('active')
+      });
+      e.target.classList.add('active')
+      tabcontents.forEach((x) => { x.style.display = 'none' })
+      document.querySelector(`#${content}`).style.display = 'block'
+    }
+  </script>
+</body>
+
+</html>
