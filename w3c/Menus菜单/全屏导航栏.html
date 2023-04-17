@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全屏导航栏</title>
+  <style>
+    *{ margin: 0;padding: 0;}
+    .overlay{
+      display: block;
+      background-color: rgba(177, 201, 65, 0.5) ;
+      position: absolute;
+      color:#F9F8F6;
+      width: 100%;
+      height: 0%;
+      transition: 0.4s;
+      overflow-y: hidden;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+    .closebtn{
+      position: absolute;
+      top:5px;
+      right:20px;
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+    }
+    .overlay-content{
+      margin-top: 40px;
+    }
+    a{
+      text-align:center;
+      text-decoration: none;
+      display: block;
+      height: 40px;
+      color:#F9F8F6;
+      font-size: 20px;
+    }
+    a:hover{
+      background-color: #F9F8F6;
+      color:#B1C941 ;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <h2>Fullscreen Overlay Nav Example</h2>
+  <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+  <p>In this example, the navigation menu will slide in, from left to right:</p>
+  <span style="font-size:30px;cursor:pointer"
+  onclick="openNav()">&#9776; open</span>
+
+  <script>
+    let mynav = document.getElementById('myNav')
+  function  openNav(){
+    console.log('ss')
+      mynav.style.height = '100%'
+
+  }
+  function closeNav(){
+    console.log('gg')
+    mynav.style.height = '0%'
+  }
+  </script>
+</body>
+
+</html>
