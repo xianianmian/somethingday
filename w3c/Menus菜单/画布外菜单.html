@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画布外菜单</title>
+  <style>
+    *{margin: 0px;padding: 0px;}
+    .sidenav{
+      width: 0%;
+      height: 100%;
+      background-color:#B1C941 ;
+      color: #F9F8F6;
+      overflow-x: hidden;
+      transition: 0.4s;
+      position: fixed;
+      padding-top: 7%;
+      z-index:1;
+    }
+    .closebtn{
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      top:10px;
+      font-size: 30px;
+    }
+    a{
+      text-align:center;
+      text-decoration: none;
+      display: block;
+      height: 40px;
+      color:#F9F8F6;
+      font-size: 20px;
+    }
+    a:hover{
+      background-color: #F9F8F6;
+      color:#B1C941 ;
+    }
+    #main{
+      min-width: 77%;
+      margin-left: 0%;
+      transition: 0.4s;
+    }
+  </style>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <div id="main">
+    <h2>Sidenav Push Example</h2>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  </div>
+  <script>
+    var target = document.querySelector("#mySidenav")
+    function openNav(){
+      
+      target.style.width='20%';
+      document.getElementById('main').style.marginLeft = '22%'
+      document.body.style.backgroundColor = " rgba(177, 201, 65, 0.3) "
+
+
+    }
+    function closeNav(){
+      document.getElementById('mySidenav').style.width='0%';
+      document.getElementById('main').style.marginLeft = '0%';
+      document.body.style.backgroundColor = "white";
+    }
+    document.addEventListener('click',function(e){
+      
+      if(document.getElementById('main').style.marginLeft =='22%'){
+        document.getElementById('main').onclick =function(){
+          closeNav()
+        }
+      }
+    })
+
+    
+  </script>
+</body>
+</html>
