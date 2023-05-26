@@ -56,3 +56,7 @@ bound(); // 输出"Hello, world!"
 
 ```
 
+<<<<<<< HEAD
+=======
+3. bind：语法和call一模一样，区别在于立即执行还是等待执行 bind不立即调用函数
+>>>>>>> ad03adb1e1d9f8f5ec11593263eb951eab4fa6f4
