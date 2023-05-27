@@ -27,16 +27,13 @@
    function Animal(name) {
      this.name = name;
    }
-   
    Animal.prototype.sayName = function() {
      console.log(`My name is ${this.name}`);
    };
-   
    function Dog(name, type) {
      Animal.call(this, name); // 继承父类的属性
      this.type = type;
    }
-   
    // 辅助函数，将父类原型对象的副本赋值给子类原型对象
    function inheritPrototype(subType, superType) {
      subType.prototype = Object.create(superType.prototype);
