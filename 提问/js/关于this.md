@@ -4,7 +4,7 @@
 
 > 谁调用了，this就指向谁。
 
-#### 这里有些特俗情况
+#### 这里有些特殊情况
 
 1. 当在 DOM 元素上注册事件回调函数时，如果该回调函数是在全局作用域下调用的，那么其中的 `this` 也会指向全局对象。也就是`btn.addEventListener('click',function(){})`与` btn.onclick = handleClick;`的差别。  、
 
@@ -59,4 +59,5 @@ bound(); // 输出"Hello, world!"
 <<<<<<< HEAD
 =======
 3. bind：语法和call一模一样，区别在于立即执行还是等待执行 bind不立即调用函数
->>>>>>> ad03adb1e1d9f8f5ec11593263eb951eab4fa6f4
+
+ad03adb1e1d9f8f5ec11593263eb951ea6f4
