@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="app">
+        <span>计数但: {{name}}</span>
+        <input type="text" v-model="name" />
+        <span>工资：{{more.salary}}</span>
+        <input type="text" v-model="more.salary" />
+    </div>
+</body>
+</html>
+
+<script src="./vue.js"></script>
+
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            name: '阿毛',
+            more: {
+                salary: 1000
+            }
+        }
+    })
+    console.log(vm)
+</script>
