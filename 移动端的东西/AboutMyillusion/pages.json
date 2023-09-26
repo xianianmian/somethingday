@@ -1,0 +1,91 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path" : "pages/shop/shop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": ""
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": ""
+            }
+        }
+        ,{
+            "path" : "pages/zhuye/zhuye",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的幻想"
+            }
+        },{
+            "path" : "pages/news/news",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": ""
+            }
+        },{
+            "path" : "pages/huanXiangD/huanXiangD",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": ""
+            }
+        }
+        
+    ],
+		"window": {
+		    "navigationBarBackgroundColor": "#B1C941",
+		    "navigationBarTitleText": "我的项目",
+		    "navigationBarTextStyle": "white"
+		  },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "rgba(177, 201, 65, 1) ",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+			"selectedColor": "#3cc51f",
+			"borderStyle": "black",
+			"backgroundColor": "#ffffff",
+			"list": [
+				{
+				"pagePath": "pages/zhuye/zhuye",
+				"iconPath": "static/imgs/icons/pro-home.png",
+				"selectedIconPath": "static/imgs/icons/pro-home (1).png",
+				"text": "主页"
+			},
+				{
+				"pagePath": "pages/news/news",
+				"iconPath": "static/imgs/icons/pro-email.png",
+				"selectedIconPath": "static/imgs/icons/pro-email (1).png",
+				"text": "信息"
+			},
+				{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/imgs/icons/pro-user.png",
+				"selectedIconPath": "static/imgs/icons/pro-user (1).png",
+				"text": "用户中心"
+			},
+				{
+				"pagePath": "pages/shop/shop",
+				"iconPath": "static/imgs/icons/pro-goods.png",
+				"selectedIconPath": "static/imgs/icons/pro-goods (1).png",
+				"text": "商城"
+			}
+			]
+	},
+	"easycom": {
+			"autoscan": true,
+			"custom": {
+				// uni-ui 规则如下配置
+				"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+			}
+		},
+		"sitemapLocation": "sitemap.json"
+}
