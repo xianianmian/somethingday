@@ -1,4 +1,4 @@
-将文件夹名称“计算器”改成“src”，替换import React, { useReducer } from 'react';
+import React, { useReducer } from 'react';
 
 const Jisuan: React.FC = () => {
   const [daan, dispatchDaan] = useReducer((state: string, action: { str?: string; type?: string }) => {
@@ -100,4 +100,3 @@ const Jisuan: React.FC = () => {
 };
 
 export default Jisuan;
-项目中的src即可。
