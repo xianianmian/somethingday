@@ -1,0 +1,48 @@
+.shopPage{
+
+  background-color: rgb(233, 233, 140);
+}
+
+
+.top{
+  background-color: yellow;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+}
+.middle{
+  margin-top: 5px;
+  height: 150px;
+  /* background-color: yellowgreen; */
+  /* margin-bottom: 5px; */
+}
+.middle .xiaoqq{
+  text-align: center;
+}
+.middle .xiaoqq h1{
+  margin: 10px 0;
+}
+.middle .twoBtn{
+  text-align: center;
+}
+.nav{
+  height: 100px;
+  /* background-color: rgb(146, 146, 238); */
+  margin-bottom: 5px;
+}
+.nav .grid-demo-item-block {
+  border: solid 1px #999999;
+  /* background: var(--adm-color-box); */
+  text-align: center;
+  color: #f60909;
+  height: 80px;
+  line-height: 80px;
+}
+
+.list{
+  /* background: #f60909; */
+  /* height: 220px; */
+}
+.list .menu{
+  /* width: 50%; */
+}
